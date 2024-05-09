@@ -10,13 +10,13 @@ type Message struct {
 	ProductIds    []string         `json:"product_ids"`
 	Products      []Product        `json:"products"`
 	Currencies    []Currency       `json:"currencies"`
-	TradeID       int              `json:"trade_id,number"`
+	TradeID       int              `json:"trade_id"`
 	OrderID       string           `json:"order_id"`
 	ClientOID     string           `json:"client_oid"`
-	Sequence      int64            `json:"sequence,number"`
+	Sequence      int64            `json:"sequence"`
 	MakerOrderID  string           `json:"maker_order_id"`
 	TakerOrderID  string           `json:"taker_order_id"`
-	Time          Time             `json:"time,string"`
+	Time          Time             `json:"time"`
 	RemainingSize string           `json:"remaining_size"`
 	NewSize       string           `json:"new_size"`
 	OldSize       string           `json:"old_size"`
@@ -39,6 +39,10 @@ type Message struct {
 	UserID        string           `json:"user_id"`
 	ProfileID     string           `json:"profile_id"`
 	LastTradeID   int              `json:"last_trade_id"`
+	Signature     string           `json:"signature"`
+	Key           string           `json:"key"`
+	Passphrase    string           `json:"passphrase"`
+	Timestamp     string           `json:"timestamp"`
 }
 
 type MessageChannel struct {
